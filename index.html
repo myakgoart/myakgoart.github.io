@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Velvet Archive</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="게임 원화 포트폴리오 & 커미션">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Sans+KR:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 별 모양 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="spark" viewBox="-100 -100 200 200"><path d="M0-100 C8-20 20-8 100 0 C20 8 8 20 0 100 C-8 20 -20 8 -100 0 C-20-8 -8-20 0-100Z"/></symbol>
+    <symbol id="spark-thin" viewBox="-100 -100 200 200"><path d="M0-100 L7-7 100 0 7 7 0 100 -7 7 -100 0 -7-7Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- 부팅 화면 -->
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-in">
+    <p class="boot-title">VELVET.ARCHIVE <span>— SYSTEM BOOT</span></p>
+    <ol class="boot-lines">
+      <li>LOAD PROFILE <i></i> OK</li>
+      <li>LOAD ARCHIVE <i></i> OK</li>
+      <li>CALIBRATE DIAL <i></i> OK</li>
+    </ol>
+    <div class="boot-bar"><i></i></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><i></i></div>
+<p class="hud" id="hud" aria-hidden="true">X <b id="hudX">0000</b> · Y <b id="hudY">0000</b> · SCROLL <b id="hudS">000</b>%</p>
+
+<header class="masthead">
+  <a class="mh-logo" href="#cover"><svg class="spark" aria-hidden="true"><use href="#spark-thin"/></svg><span id="siteName">VELVET ARCHIVE</span></a>
+  <nav class="mh-nav" aria-label="메뉴">
+    <a href="#about"><b>01</b>Profile</a>
+    <a href="#archive"><b>02</b>Archive</a>
+    <a href="#journal"><b>03</b>Journal</a>
+    <a href="#commission"><b>04</b>Commission</a>
+  </nav>
+  <div class="mh-right">
+    <span class="mh-status" id="mhStatus"></span>
+    <a class="mh-cta" href="#contact">신청하기</a>
+  </div>
+</header>
+
+<main>
+  <!-- 표지 -->
+  <section class="hero gridded" id="cover">
+    <div class="wrap">
+      <div class="hero-meta">
+        <span>[VELVET.ARCHIVE]</span><span>PORTFOLIO + COMMISSION</span><span id="recLine">REC</span><span id="issueLine">No. 01</span>
+      </div>
+      <div class="hero-grid">
+        <aside class="hero-side" aria-hidden="true">
+          <span class="stars4">****</span>
+          <svg class="side-circle" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49"/></svg>
+          <div class="side-block">
+            <svg class="spark side-spark"><use href="#spark-thin"/></svg>
+            <p id="sideText">Character art for games. Every line keeps a story, every story keeps a face. Drawn by hand, archived in velvet.</p>
+            <p class="stars4">**** <span class="loops">∞∞</span></p>
+          </div>
+          <span class="badge">NO<b id="badgeNo">01</b></span>
+          <div class="side-rail">
+            <svg class="spark"><use href="#spark-thin"/></svg>
+            <svg class="spark"><use href="#spark-thin"/></svg>
+            <svg class="spark"><use href="#spark-thin"/></svg>
+          </div>
+          <p class="side-vert">///ARCHIVE <i></i> ///GRAPHIC</p>
+          <p class="side-date" id="sideDate"></p>
+        </aside>
+
+        <div class="hero-stage">
+          <span class="plus p1" aria-hidden="true">+</span><span class="plus p2" aria-hidden="true">+</span><span class="plus p3" aria-hidden="true">+</span>
+          <svg class="diag" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="100" x2="62" y2="0"/><line x1="40" y1="100" x2="100" y2="22"/></svg>
+
+          <h1 class="hero-name" id="coverName"></h1>
+
+          <figure class="hero-img">
+            <img class="img-mono" id="heroMono" src="" alt="">
+            <img class="img-color" id="heroImg" src="" alt="대표 작품">
+            <span class="corner c-tl"></span><span class="corner c-tr"></span><span class="corner c-bl"></span><span class="corner c-br"></span>
+            <figcaption>FIG.01 — COVER ART</figcaption>
+          </figure>
+
+          <svg class="constellation" viewBox="0 0 400 600" aria-hidden="true">
+            <g class="cst-lines">
+              <line x1="110" y1="110" x2="110" y2="600"/>
+              <line x1="290" y1="110" x2="290" y2="600"/>
+              <line x1="190" y1="372" x2="390" y2="372"/>
+              <line x1="190" y1="392" x2="390" y2="392"/>
+            </g>
+            <circle class="cst-ring" cx="110" cy="110" r="88"/>
+            <circle class="cst-ring" cx="290" cy="110" r="88"/>
+            <circle class="cst-ring" cx="290" cy="382" r="88"/>
+            <circle class="cst-dash" cx="290" cy="382" r="70"/>
+            <use class="cst-star" href="#spark-thin" x="60" y="60" width="100" height="100"/>
+            <use class="cst-star" href="#spark-thin" x="240" y="60" width="100" height="100"/>
+            <use class="cst-star cst-sm" href="#spark-thin" x="272" y="354" width="36" height="36"/>
+            <use class="cst-star cst-sm" href="#spark-thin" x="272" y="374" width="36" height="36"/>
+          </svg>
+
+          <ul class="hero-index">
+            <li><b>[01]</b>Character Design<span>캐릭터 디자인</span></li>
+            <li><b>[02]</b>Concept Art<span>컨셉 아트</span></li>
+            <li><b>[03]</b>Illustration<span>일러스트</span></li>
+            <li class="barcode" aria-hidden="true"><i></i><span id="barcodeNo"></span></li>
+          </ul>
+
+          <div class="tp hero-panel">
+            <span class="tp-tab tp-l" id="tabL"></span>
+            <span class="tp-tab tp-r" id="tabR"></span>
+            <div class="tp-line" aria-hidden="true"><svg viewBox="0 0 30 20"><circle cx="10" cy="10" r="8"/><circle cx="20" cy="10" r="8"/></svg><i></i><span>****</span><svg class="spark"><use href="#spark-thin"/></svg></div>
+            <p class="hero-tag" id="tagline"></p>
+            <p class="hero-intro" id="intro"></p>
+            <div class="hero-btns">
+              <a class="btn btn-ink" href="#archive">작품 다이얼 돌리기 ↘</a>
+              <a class="btn btn-ghost" href="#commission">커미션 안내</a>
+              <span class="slot" id="slotLine"></span>
+            </div>
+          </div>
+
+          <div class="duo-band"><img id="heroDuo" src="" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 프로필 -->
+  <section class="section gridded profile" id="about">
+    <div class="wrap">
+      <div class="folio"><b>[01]</b><span data-scramble>PROFILE</span><i></i><span class="f-kr">작가 소개</span><span class="f-plus">+</span></div>
+      <div class="profile-grid">
+        <div class="pf-head">
+          <p class="code-tag">{ARTIST}.PROFILE</p>
+          <h2 class="headline"><span class="h-sans">Drawing</span><span class="h-serif">stories</span></h2>
+          <p class="lead" id="pAbout"></p>
+        </div>
+        <figure class="pf-visual">
+          <span class="pf-bracket" aria-hidden="true">[+]</span>
+          <span class="pf-img"><img id="pfImg" src="" alt=""></span>
+          <span class="pf-ast" aria-hidden="true">*</span>
+          <figcaption class="pf-cap"><span class="pf-blk">Xx.</span><span id="pfCap"></span></figcaption>
+        </figure>
+        <div class="pf-card">
+          <p class="pf-tag">CLASS : <span id="pClass"></span></p>
+          <dl class="spec">
+            <div><dt>NAME</dt><dd id="pName"></dd></div>
+            <div><dt>ELEMENT</dt><dd id="pElement"></dd></div>
+            <div class="spec-wide"><dt>TOOLS</dt><dd id="pTools"></dd></div>
+          </dl>
+          <div class="stats" id="pStats"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 작품 보관함 -->
+  <section class="section archive" id="archive">
+    <div class="wrap">
+      <div class="folio folio-light"><b>[02]</b><span data-scramble>ARCHIVE · SIDE A</span><i></i><span class="f-kr" id="archiveCount"></span><span class="f-plus">+</span></div>
+      <div class="archive-head">
+        <h2 class="headline headline-light"><span class="h-sans">The</span><span class="h-serif">archive</span></h2>
+        <p class="archive-note">다이얼을 돌리거나 오른쪽 파일 탭을 눌러 폴더를 골라요.<br>한 번 더 누르면 폴더가 열려요.</p>
+      </div>
+      <div class="archive-grid">
+        <div class="dial-stage">
+          <div class="dial-wrap">
+            <svg class="ticks" id="ticks" viewBox="-120 -120 240 240" aria-hidden="true"></svg>
+            <div class="needle" aria-hidden="true"><svg class="spark"><use href="#spark"/></svg><span>SELECT</span></div>
+            <div class="dial" id="dial" tabindex="0" role="listbox" aria-label="작품 폴더 다이얼. 방향키로 돌리고 엔터로 열어요">
+              <div class="disc" id="disc">
+                <svg class="disc-text" viewBox="0 0 100 100" aria-hidden="true">
+                  <defs><path id="discPath" d="M50,50 m-47.4,0 a47.4,47.4 0 1,1 94.8,0 a47.4,47.4 0 1,1 -94.8,0"/></defs>
+                  <text><textPath href="#discPath" id="discText" textLength="297" lengthAdjust="spacing"></textPath></text>
+                </svg>
+                <div class="holes" id="holes"></div>
+              </div>
+              <div class="sheen" aria-hidden="true"></div>
+              <span class="xh xh-h" aria-hidden="true"></span><span class="xh xh-v" aria-hidden="true"></span>
+              <button class="label" id="discLabel" type="button" tabindex="-1" aria-label="선택한 폴더 열기">
+                <img id="labelImg" src="" alt="">
+                <span class="spindle" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+          <div class="dial-ctrl">
+            <button type="button" id="dialPrev" aria-label="이전 폴더">‹ PREV</button>
+            <span class="dial-read" id="dialRead">TRACK 01 / 01 · 000°</span>
+            <button type="button" id="dialNext" aria-label="다음 폴더">NEXT ›</button>
+          </div>
+        </div>
+        <div class="strips" id="strips" role="tablist" aria-label="작품 폴더"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 작업일지 -->
+  <section class="section gridded journal" id="journal">
+    <div class="wrap">
+      <div class="folio"><b>[03]</b><span data-scramble>JOURNAL</span><i></i><span class="f-kr">작업일지</span><span class="f-plus">+</span></div>
+      <h2 class="headline"><span class="h-sans">Notes</span><span class="h-serif">from the desk</span></h2>
+      <div class="posts" id="posts"></div>
+    </div>
+  </section>
+
+  <!-- 04 커미션 -->
+  <section class="section commission" id="commission">
+    <div class="wrap">
+      <div class="folio folio-light"><b>[04]</b><span data-scramble>COMMISSION · SIDE B</span><i></i><span class="f-kr">커미션 안내</span><span class="f-plus">+</span></div>
+      <div class="comm-head">
+        <h2 class="headline headline-light"><span class="h-sans">Open for</span><span class="h-serif">commission</span></h2>
+        <p class="comm-status" id="statusLine"></p>
+      </div>
+      <div class="tiers" id="tiers"></div>
+      <div class="comm-info">
+        <div class="ci-box">
+          <p class="code-tag code-light">{OPTIONS}.ADD</p>
+          <table class="options"><tbody id="options"></tbody></table>
+        </div>
+        <div class="ci-box">
+          <p class="code-tag code-light">{NOTICE}.READ</p>
+          <ol class="rules" id="rules"></ol>
+          <p class="code-tag code-light mt">{NOT}.ACCEPTED</p>
+          <p class="no-list" id="notAccepted"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 신청서 -->
+  <section class="section gridded contact" id="contact">
+    <div class="wrap">
+      <div class="folio"><b>[05]</b><span data-scramble>REQUEST FORM</span><i></i><span class="f-kr">신청서</span><span class="f-plus">+</span></div>
+      <div class="contact-grid">
+        <div class="contact-text">
+          <h2 class="headline"><span class="h-sans">Write</span><span class="h-serif">to me</span></h2>
+          <p>신청서를 보내면 작가 이메일로 바로 전달돼요. 확인 후 답장드릴게요.</p>
+          <p class="mail"><span class="code-tag">E-MAIL</span><span id="email"></span></p>
+          <ul class="sns" id="sns"></ul>
+        </div>
+        <form class="tp tp-paper apply" id="applyForm" novalidate>
+          <span class="tp-tab tp-l">Request</span>
+          <span class="tp-tab tp-r" id="reqNo"></span>
+          <div class="field">
+            <label for="f-name"><b>01</b> 닉네임</label>
+            <input id="f-name" name="닉네임" required autocomplete="nickname">
+          </div>
+          <div class="field">
+            <label for="f-email"><b>02</b> 답장 받을 이메일</label>
+            <input id="f-email" name="이메일" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="f-tier"><b>03</b> 신청 등급</label>
+            <select id="f-tier" name="신청등급"></select>
+          </div>
+          <div class="field">
+            <label for="f-deadline"><b>04</b> 희망 마감일 <small>(선택)</small></label>
+            <input id="f-deadline" name="희망마감일" type="date">
+          </div>
+          <div class="field wide">
+            <label for="f-ref"><b>05</b> 참고 자료 링크 <small>(선택)</small></label>
+            <input id="f-ref" name="참고자료" type="url" placeholder="https://">
+          </div>
+          <div class="field wide">
+            <label for="f-detail"><b>06</b> 원하는 내용</label>
+            <textarea id="f-detail" name="내용" rows="5" required placeholder="캐릭터 설정, 포즈, 분위기 등을 자유롭게 적어주세요"></textarea>
+          </div>
+          <label class="agree wide" for="f-agree">
+            <input id="f-agree" type="checkbox" required> 커미션 안내사항을 읽고 동의해요
+          </label>
+          <button class="btn btn-red btn-big wide" type="submit" id="submitBtn">신청서 보내기 ↗</button>
+          <p class="form-msg wide" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="wrap">
+    <p class="colophon-mark" id="footName">VELVET ARCHIVE</p>
+    <div class="colophon-row">
+      <span>© <span id="year"></span> ALL ARTWORKS BELONG TO THE ARTIST</span>
+      <span>///ARCHIVE ///GRAPHIC ///COMMISSION</span>
+      <a href="#cover">BACK TO TOP ↑</a>
+    </div>
+  </div>
+</footer>
+
+<!-- 폴더 안 -->
+<dialog class="sheet-view" id="folderView" aria-labelledby="fvEn">
+  <div class="sv-head">
+    <button class="sv-back" id="fvBack" type="button">← SIDE A</button>
+    <span class="sv-meta" id="fvCount"></span>
+  </div>
+  <div class="sv-body">
+    <div class="sv-title">
+      <span class="code-tag" id="fvNo"></span>
+      <span class="sv-en"><span id="fvEn"></span></span>
+      <span class="sv-kr" id="fvKr"></span>
+      <p class="sv-desc" id="fvDesc"></p>
+    </div>
+    <div class="masonry" id="masonry"></div>
+  </div>
+</dialog>
+
+<!-- 일지 글 -->
+<dialog class="sheet-view" id="postView" aria-labelledby="pvTitle">
+  <div class="sv-head">
+    <button class="sv-back" id="pvBack" type="button">← JOURNAL</button>
+    <span class="sv-meta" id="pvMeta"></span>
+  </div>
+  <article class="sv-body article">
+    <h2 class="article-title" id="pvTitle"></h2>
+    <img class="article-cover" id="pvCover" src="" alt="">
+    <div class="article-body" id="pvBody"></div>
+  </article>
+</dialog>
+
+<!-- 그림 크게 보기 -->
+<dialog class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" type="button" aria-label="닫기">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="이전 그림">‹</button>
+  <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="다음 그림">›</button>
+  <figure>
+    <img id="lbImg" src="" alt="">
+    <figcaption>
+      <span class="code-tag code-light" id="lbFolder"></span>
+      <strong id="lbTitle"></strong>
+      <span class="code-tag code-light" id="lbMeta"></span>
+      <span class="lb-note" id="lbNote"></span>
+    </figcaption>
+  </figure>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

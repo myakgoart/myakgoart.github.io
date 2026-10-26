@@ -1,0 +1,98 @@
+[
+  {
+    "name": "원신",
+    "en": "Genshin Impact",
+    "desc": "원신 캐릭터 팬아트 모음",
+    "cover": "images/원신/캐릭터-단체-예시.svg",
+    "works": [
+      {
+        "title": "캐릭터 단체 예시",
+        "image": "images/원신/캐릭터-단체-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "나히다 예시",
+        "image": "images/원신/나히다-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "라이덴 쇼군 예시",
+        "image": "images/원신/라이덴-쇼군-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "푸리나 팬아트 예시",
+        "image": "images/원신/푸리나-팬아트-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "일러스트",
+    "en": "Illustration",
+    "desc": "오리지널 캐릭터와 컨셉 일러스트",
+    "cover": "images/일러스트/벨벳-왕궁의-시녀-예시.svg",
+    "works": [
+      {
+        "title": "벨벳 왕궁의 시녀 예시",
+        "image": "images/일러스트/벨벳-왕궁의-시녀-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "붉은 달의 성당 예시",
+        "image": "images/일러스트/붉은-달의-성당-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "홍련의 검사 예시",
+        "image": "images/일러스트/홍련의-검사-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "name": "크로키",
+    "en": "Croquis",
+    "desc": "매일 하는 인체 드로잉 연습",
+    "cover": "images/크로키/크로키-05-예시.svg",
+    "works": [
+      {
+        "title": "크로키 05 예시",
+        "image": "images/크로키/크로키-05-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "크로키 04 예시",
+        "image": "images/크로키/크로키-04-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "크로키 03 예시",
+        "image": "images/크로키/크로키-03-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "크로키 02 예시",
+        "image": "images/크로키/크로키-02-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      },
+      {
+        "title": "크로키 01 예시",
+        "image": "images/크로키/크로키-01-예시.svg",
+        "date": "2026-10-26",
+        "note": ""
+      }
+    ]
+  }
+]

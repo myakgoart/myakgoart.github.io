@@ -1,0 +1,54 @@
+{
+  "siteName": "VELVET ARCHIVE",
+  "issue": "No. 01",
+  "nameEn": "Your Name",
+  "nameKr": "작가 닉네임",
+  "role": "Game Concept Artist",
+  "tagline": "캐릭터의 서사를\n한 장에 담습니다",
+  "intro": "서브컬처 게임 캐릭터와 컨셉 아트를 그립니다. 캐릭터의 서사가 한 장에 담기는 그림을 좋아해요.",
+  "heroImage": "images/work-01.svg",
+  "profile": {
+    "class": "원화가 · 캐릭터 디자이너",
+    "element": "홍염",
+    "about": "게임콘텐츠학과에서 게임 원화를 전공하고 있어요. 실버팰리스, 원신, 스타레일 같은 서브컬처 게임의 캐릭터 일러스트와 컨셉 아트를 주로 작업합니다.",
+    "stats": [
+      {
+        "label": "캐릭터 디자인",
+        "value": 92
+      },
+      {
+        "label": "일러스트 완성도",
+        "value": 88
+      },
+      {
+        "label": "컨셉 아트",
+        "value": 80
+      },
+      {
+        "label": "배경",
+        "value": 64
+      }
+    ],
+    "tools": [
+      "Clip Studio Paint",
+      "Photoshop"
+    ]
+  },
+  "commission": {
+    "open": true,
+    "slotsTotal": 5,
+    "slotsLeft": 3
+  },
+  "email": "your-email@example.com",
+  "sns": [
+    {
+      "label": "X (Twitter)",
+      "url": "https://x.com/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/"
+    }
+  ],
+  "formEndpoint": ""
+}
