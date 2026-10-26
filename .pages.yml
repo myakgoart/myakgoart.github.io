@@ -1,0 +1,115 @@
+media:
+  input: images
+  output: images
+
+content:
+  - name: journal
+    label: 작업일지 (블로그)
+    type: file
+    path: content/journal.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: 제목, type: string, required: true }
+      - { name: date, label: 날짜, type: date }
+      - name: tag
+        label: 분류
+        type: select
+        options:
+          values: [작업일지, 공지, 커미션, 일상]
+      - { name: cover, label: 대표 그림, type: image }
+      - { name: body, label: 본문, type: rich-text }
+
+  - name: folders
+    label: 작품 폴더
+    type: file
+    path: content/folders.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: 폴더 이름 (한글), type: string, required: true }
+      - { name: en, label: 영어 제목, type: string }
+      - { name: desc, label: 한 줄 설명, type: string }
+      - { name: cover, label: 표지 그림, type: image }
+      - name: works
+        label: 작품들
+        type: object
+        list: true
+        fields:
+          - { name: title, label: 작품 제목, type: string }
+          - { name: image, label: 그림, type: image }
+          - { name: date, label: 날짜, type: date }
+          - { name: note, label: 메모 (선택), type: text }
+
+  - name: prices
+    label: 커미션 가격표
+    type: file
+    path: content/prices.json
+    format: json
+    fields:
+      - name: tiers
+        label: 등급
+        type: object
+        list: true
+        fields:
+          - { name: name, label: 이름 (예 흉상), type: string }
+          - { name: en, label: 영어 (예 BUST), type: string }
+          - { name: rarity, label: 별 개수 (3~5), type: number }
+          - { name: price, label: 가격 (숫자만), type: number }
+          - { name: days, label: 작업 기간, type: string }
+          - { name: includes, label: 포함 내용, type: string, list: true }
+      - name: options
+        label: 추가 옵션
+        type: object
+        list: true
+        fields:
+          - { name: name, label: 옵션, type: string }
+          - { name: price, label: 가격, type: string }
+      - { name: rules, label: 안내사항, type: string, list: true }
+      - { name: notAccepted, label: 받지 않는 작업, type: string, list: true }
+
+  - name: site
+    label: 사이트 기본 정보
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: siteName, label: 사이트 이름, type: string }
+      - { name: issue, label: 호수 (예 No. 01), type: string }
+      - { name: nameEn, label: 영어 이름 (크게 보임), type: string }
+      - { name: nameKr, label: 한글 이름, type: string }
+      - { name: role, label: 직업 한 줄, type: string }
+      - { name: tagline, label: 표지 문구, type: text }
+      - { name: intro, label: 소개, type: text }
+      - { name: heroImage, label: 표지 그림, type: image }
+      - name: profile
+        label: 프로필
+        type: object
+        fields:
+          - { name: class, label: 클래스, type: string }
+          - { name: element, label: 속성, type: string }
+          - { name: about, label: 자기소개, type: text }
+          - name: stats
+            label: 능력치
+            type: object
+            list: true
+            fields:
+              - { name: label, label: 항목, type: string }
+              - { name: value, label: 점수 (0~100), type: number }
+          - { name: tools, label: 쓰는 프로그램, type: string, list: true }
+      - name: commission
+        label: 커미션 접수
+        type: object
+        fields:
+          - { name: open, label: 지금 받는 중, type: boolean }
+          - { name: slotsTotal, label: 전체 자리, type: number }
+          - { name: slotsLeft, label: 남은 자리, type: number }
+      - { name: email, label: 이메일, type: string }
+      - name: sns
+        label: SNS
+        type: object
+        list: true
+        fields:
+          - { name: label, label: 이름, type: string }
+          - { name: url, label: 주소, type: string }
+      - { name: formEndpoint, label: Formspree 주소, type: string }
