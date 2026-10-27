@@ -1,5 +1,5 @@
 {
-  "siteName": "VELVET ARCHIVE",
+  "siteName": "ART GALLERY",
   "issue": "No. 01",
   "nameEn": "Your Name",
   "nameKr": "작가 닉네임",
@@ -49,6 +49,5 @@
       "label": "Instagram",
       "url": "https://instagram.com/"
     }
-  ],
-  "formEndpoint": ""
+  ]
 }
