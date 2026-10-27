@@ -35,8 +35,8 @@
   },
   "commission": {
     "open": true,
-    "slotsTotal": 5,
-    "slotsLeft": 5
+    "slotsTotal": 10,
+    "slotsLeft": 4
   },
   "email": "myakgoart@gmail.com",
   "sns": [
